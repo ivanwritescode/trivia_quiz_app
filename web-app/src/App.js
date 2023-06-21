@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-import HomePage from './pages/home'
+import HomePage from './pages/Home'
 
 import './styles/reset.scss'
 import './styles/main.scss'
