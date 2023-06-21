@@ -1,6 +1,6 @@
 import React from "react";
-import { BsCheckLg  } from 'react-icons/bs'
-import { RxCross2  } from 'react-icons/rx'
+import { BsCheckLg } from 'react-icons/bs'
+import { RxCross2 } from 'react-icons/rx'
 import Button from "./Button";
 
 interface ICardControlProps {
