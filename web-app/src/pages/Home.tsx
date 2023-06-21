@@ -5,7 +5,8 @@ import logo from '../images/zeniark-logo.png'
 
 export default function HomePage() {
   return (
-    <div className="page page-home">
+    <main className="page page-home">
+
       <div className="site-logo">
         <img src={logo} alt="zeniark logo" />
       </div>
@@ -21,6 +22,8 @@ export default function HomePage() {
           <Link to="quiz">LET’S START!</Link>
         </button>
       </div>
-    </div>
+
+
+    </main>
   )
 }
