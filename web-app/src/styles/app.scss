@@ -1,0 +1,84 @@
+$blue-primary: #085696;
+
+html {
+    font-family: 'Poppins', sans-serif;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    background: #fff url("../images/bg.png");
+    background-size: cover;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    z-index: 0;
+}
+
+.page-home {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    min-height: 50vh;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem; 
+
+    .page-title h1 {
+        font-size: 1.5rem;
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: 0.005em;
+        color: #000
+    }
+
+    .site-logo {
+        max-width: 45%;
+        margin: 0 auto;
+        margin-bottom: 1em;
+    }
+
+    .page-body {
+        p.info {
+            font-size: 0.9rem;
+            font-weight:600;
+            margin-bottom: 2em;    
+        }
+
+        p.question {
+            font-size: 1.2rem;
+            font-weight: 600;
+            padding: 0.5em 0;
+            border-radius: 0.8rem;
+            background: $blue-primary;
+            color: #fff;
+            width: 70%;
+            margin: 0 auto;
+        }
+    }
+
+    .page-control button {
+        border: 0;
+        padding: 0.3em 0;
+        line-height: 1;
+        color: $blue-primary;
+        border-bottom: 2px solid $blue-primary;
+        background: inherit;
+
+        a {
+            text-decoration: none;
+            color: $blue-primary;
+            font-size: 1.5rem;
+            font-weight: bolder;
+        }
+    }
+}
