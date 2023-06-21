@@ -7,6 +7,7 @@ import CardFooter from '../UI/CardFooter';
 import CardControl from '../UI/CardControl';
 import { IQuestion } from '../util/interfaces';
 import he from 'he';
+import { useNavigate } from 'react-router-dom';
 
 interface IQuizPageProp {
     currentPosition: number;
@@ -21,6 +22,14 @@ const QuizPage = ({
     question,
     handleClick,
 }: IQuizPageProp) => {
+    const navigate = useNavigate();
+
+    const handleControlClicked = (value: string) => {
+        if(currentPosition === questionsCount)
+            navigate("/finalresults")
+        handleClick(value);
+    };
+
     return (
         <main>
             <Card className="page page-quiz">
@@ -35,7 +44,7 @@ const QuizPage = ({
                     <p className='question'>{he.decode(question.question)}</p>
                 </CardBody>
                 <CardFooter hasBorder>
-                    <CardControl isCentered handleClick={handleClick} />
+                    <CardControl isCentered handleClick={handleControlClicked} />
                 </CardFooter>
             </Card>
         </main>
