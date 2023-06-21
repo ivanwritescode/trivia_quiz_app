@@ -6,10 +6,7 @@ interface IButtonProps {
     icons?: ComponentType<any>;
 }
 
-const Button = ({ children, className = "", icons: Icons}: IButtonProps) => {
-    return (
-        <button className={`btn ${className}`}>{Icons && <Icons />}{children}</button>
-    )
-}
+const Button = ({ children, className = "", icons: Icons }: IButtonProps) =>
+    <button className={`btn ${className}`}>{Icons && <Icons />}{children}</button>
 
 export default Button;
