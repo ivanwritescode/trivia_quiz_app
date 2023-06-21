@@ -1,0 +1,15 @@
+import React, { ComponentType, ReactNode } from "react";
+
+interface IButtonProps {
+    children?: ReactNode;
+    className?: string
+    icons?: ComponentType<any>;
+}
+
+const Button = ({ children, className = "", icons: Icons}: IButtonProps) => {
+    return (
+        <button className={`btn ${className}`}>{Icons && <Icons />}{children}</button>
+    )
+}
+
+export default Button;

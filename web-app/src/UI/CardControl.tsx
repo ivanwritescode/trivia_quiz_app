@@ -1,4 +1,7 @@
 import React from "react";
+import { BsCheckLg  } from 'react-icons/bs'
+import { RxCross2  } from 'react-icons/rx'
+import Button from "./Button";
 
 interface ICardControlProps {
     className?: string;
@@ -14,8 +17,8 @@ const CardControl = ({ className = "", isCentered = false }: ICardControlProps) 
 
     return (
         <div className={getClassName()}>
-            <button className="btn btn-admit"><i></i>True</button>
-            <button className="btn btn-deny">False</button>
+            <Button className="btn-admit" icons={BsCheckLg}>True</Button>
+            <Button className="btn-deny" icons={RxCross2}>False</Button>
         </div>
     )
 }
