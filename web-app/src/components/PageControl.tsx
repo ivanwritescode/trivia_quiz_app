@@ -1,11 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const PageControl = () => {
+interface IPageControlProp {
+    content: string;
+}
+
+const PageControl = ({ content }: IPageControlProp) => {
     return (
         <div className="page-control">
             <button>
-                <Link to="quiz">LET’S START!</Link>
+                <Link to="quiz">{content}</Link>
             </button>
         </div>
     )
