@@ -40,7 +40,7 @@ const FinalResultsPage = () => {
                     </ol>
                 </CardBody>
                 <CardFooter>
-                    <PageControl content="PLAY AGAIN"/>
+                    <PageControl linkTo="../quiz" content="PLAY AGAIN"/>
                 </CardFooter>
             </Card>
         </main>

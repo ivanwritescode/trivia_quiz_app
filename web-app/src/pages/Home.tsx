@@ -17,7 +17,7 @@ export default function HomePage() {
           <p className="quiz-info-text">You will be presented with 10 True or False questions.</p>
           <p className="challenge-text">Can you score 10/10?</p>
         </div>
-        <PageControl content="LET'S START!" />
+        <PageControl linkTo="quiz" content="LET'S START!" />
       </Card>
     </main>
   )

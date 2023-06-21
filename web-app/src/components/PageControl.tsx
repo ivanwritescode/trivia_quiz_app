@@ -3,13 +3,14 @@ import { Link } from "react-router-dom";
 
 interface IPageControlProp {
     content: string;
+    linkTo: string;
 }
 
-const PageControl = ({ content }: IPageControlProp) => {
+const PageControl = ({ content, linkTo }: IPageControlProp) => {
     return (
         <div className="page-control">
             <button>
-                <Link to="quiz">{content}</Link>
+                <Link to={linkTo}>{content}</Link>
             </button>
         </div>
     )
