@@ -6,6 +6,11 @@ html {
   font-family: 'Poppins', sans-serif;
 }
 
+body {
+  margin-top: 4vh;
+  margin-bottom: 4vh;
+}
+
 body::before {
   content: "";
   position: fixed;
