@@ -16,6 +16,10 @@ body::before {
     z-index: 0;
 }
 
+.page {
+    min-height: 50vh;
+}
+
 .page-home {
     position: absolute;
     top: 50%;
@@ -26,7 +30,6 @@ body::before {
     justify-content: center;
 
     text-align: center;
-    min-height: 50vh;
     border-radius: 0.5rem;
     display: flex;
     flex-direction: column;
