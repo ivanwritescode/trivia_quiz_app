@@ -20,7 +20,7 @@ const QuizPage = () => {
                 <CardBody className="quiz-body">
                     <p className='question'>The French Kingdom helped the United States gain their independence over Great Britain during the Revolutionary War.</p>
                 </CardBody>
-                <CardFooter>
+                <CardFooter hasBorder>
                     <CardControl isCentered />
                 </CardFooter>
             </Card>
