@@ -1,74 +1,77 @@
 $blue-primary: #085696;
 
-html {
-    font-family: 'Poppins', sans-serif;
-}
+.page {
+    width: 600px;
 
-body::before {
-    content: "";
-    position: fixed;
-    background: #fff url("../images/bg.png");
-    background-size: cover;
-    left: 0;
-    right: 0;
-    top: 0;
-    height: 100vh;
-    z-index: -1;
+    &-control {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+
+        button {
+            border: 0;
+            padding: 0.3em 0;
+            line-height: 1;
+            color: $blue-primary;
+            border-bottom: 2px solid $blue-primary;
+            background: inherit;
+
+            &:hover {
+                filter: brightness(0.5);
+            }
+
+            a {
+                text-decoration: none;
+                color: $blue-primary;
+                font-size: 1.2rem;
+                font-weight: bolder;
+            }
+        }
+    }
 }
 
 .page-home {
-    text-align: center;
+    padding-top: 4em;
+    padding-bottom: 4em;
     display: flex;
+    gap: 1rem;
     flex-direction: column;
     justify-content: center;
-    gap: 1rem; 
 
-    .page-title h1 {
-        font-size: 1.5rem;
-        font-weight: 800;
-        line-height: 1;
-        letter-spacing: 0.005em;
-        color: #000
+    .home-title,
+    .home-body {
+        text-align: center;
     }
 
-    .site-logo {
+    .home-title h1 {
+        font-size: 1.2rem;
+        line-height: 1;
+        letter-spacing: 0.01em;
+        color: #000;
+        margin-top: 1em;
+    }
+
+    .home-logo {
         max-width: 45%;
         margin: 0 auto;
-        margin-bottom: 1em;
     }
 
-    .page-body {
-        p.info {
+    .home-body {
+        .quiz-info-text {
             font-size: 0.9rem;
-            font-weight:600;
-            margin-bottom: 2em;    
+            font-weight: 600;
+            margin-bottom: 2em;
         }
 
-        p.question {
+        .challenge-text {
             font-size: 1.2rem;
-            font-weight: 600;
+            font-weight: 400;
             padding: 0.5em 0;
             border-radius: 0.8rem;
             background: $blue-primary;
             color: #fff;
-            width: 70%;
+            width: 60%;
             margin: 0 auto;
-        }
-    }
-
-    .page-control button {
-        border: 0;
-        padding: 0.3em 0;
-        line-height: 1;
-        color: $blue-primary;
-        border-bottom: 2px solid $blue-primary;
-        background: inherit;
-
-        a {
-            text-decoration: none;
-            color: $blue-primary;
-            font-size: 1.5rem;
-            font-weight: bolder;
         }
     }
 }

@@ -1,3 +1,19 @@
+html {
+  font-family: 'Poppins', sans-serif;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  background: #fff url("../images/bg.png");
+  background-size: cover;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  z-index: -1;
+}
+
 .App {
   min-height: 100vh;
   display: flex;
@@ -6,22 +22,9 @@
   flex-wrap: wrap;
 }
 
-.page {
-  width: 600px;
+.card {
   max-width: 100%;
-  margin: 0 auto;
-  min-height: 50vh;
-  padding: 2rem;
-  background: #fff;
   border-radius: 0.5rem;
-
-  &-title h1 {
-    text-align: center;
-  }
-
-  &-control {
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
-  }
+  background: #fff;
+  padding: 2rem;
 }
