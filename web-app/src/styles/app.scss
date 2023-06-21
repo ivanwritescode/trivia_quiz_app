@@ -17,14 +17,6 @@ body::before {
 }
 
 .page-home {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
     text-align: center;
     border-radius: 0.5rem;
     display: flex;
