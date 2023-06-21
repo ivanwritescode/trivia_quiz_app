@@ -3,7 +3,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import HomePage from './pages/home'
 
+import './styles/reset.scss'
 import './styles/main.scss'
+import './styles/app.scss'
 
 function App() {
   return (
