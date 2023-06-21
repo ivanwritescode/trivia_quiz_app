@@ -7,6 +7,8 @@ interface IButtonProps {
 }
 
 const Button = ({ children, className = "", icons: Icons }: IButtonProps) =>
-    <button className={`btn ${className}`}>{Icons && <Icons />}{children}</button>
+    <button className={`btn ${className}`}>
+        {Icons && <Icons className="icon" />}{children}
+    </button>
 
 export default Button;
