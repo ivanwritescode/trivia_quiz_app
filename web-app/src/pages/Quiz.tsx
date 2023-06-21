@@ -12,7 +12,7 @@ interface IQuizPageProp {
     currentPosition: number;
     questionsCount: number;
     question: IQuestion;
-    handleClick: () => void;
+    handleClick: (value: string) => void;
 }
 
 const QuizPage = ({

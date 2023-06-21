@@ -22,11 +22,29 @@ const initialQuestionsState = [{
   incorrect_answers: [""],
 }]
 
+interface IUserAnswer {
+  questionIndex: number;
+  value: string;
+}
+
 function App() {
   const [randomQuestions, setRandomQuestions] = useState<IQuestion[]>(initialQuestionsState);
+  const [userAnswers, setUserAnswers] = useState<IUserAnswer[]>([]);
+  const [score, setScore] = useState(0);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const handleClick = () => {
+  const handleClick = (value: string) => {
+    setUserAnswers(prevAnswers => [
+      ...prevAnswers,
+      {
+        questionIndex: currentIndex,
+        value: value
+      }
+    ]);
+
+    if (value === randomQuestions[currentIndex].correct_answer)
+      setScore(score => score + 1);
+
     setCurrentIndex((prevState) => prevState + 1)
   };
 
@@ -37,6 +55,10 @@ function App() {
   useEffect(() => {
     console.log(currentIndex, randomQuestions);
   }, [currentIndex, randomQuestions]);
+
+  useEffect(() => {
+    console.log("SCORE: ", score);
+  }, [score])
 
   return (
     <BrowserRouter>
