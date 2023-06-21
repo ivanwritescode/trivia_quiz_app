@@ -1,3 +1,6 @@
+$button-success: #4fbd1b;
+$button-danger: #e04e10;
+
 html {
   font-family: 'Poppins', sans-serif;
 }
@@ -27,4 +30,52 @@ body::before {
   border-radius: 0.5rem;
   background: #fff;
   padding: 2rem;
+
+  &-header {
+    padding: 0;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #e3e3e3
+  }
+
+  &-body {
+    margin: 2em 0;
+  }
+
+  &-footer {
+    padding: 0;
+    padding-top: 1em;
+    border-top: 1px solid #e3e3e3
+  }
+
+  &-control {
+    display: flex;
+
+    .btn {
+      margin-right: 1em;
+    }
+
+  }
+
+  &-control.justify-center {
+    justify-content: center;
+  }
+
+  &-control.align-right {
+    justify-content: flex-end;
+  }
+}
+
+.btn {
+  border: 0;
+  border-radius: 0.3em;
+  color: #fff;
+  padding: 0.5em 1em;
+}
+
+.btn-admit {
+  background: $button-success;
+}
+
+.btn-deny {
+  background: $button-danger;
 }

@@ -75,3 +75,40 @@ $blue-primary: #085696;
         }
     }
 }
+
+.page-quiz {
+    .quiz-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        div {
+            display: flex;
+            align-items: center;
+
+            .logo {
+                width: 2rem;
+                margin-right: 1em;
+            }
+
+            .title-text {
+                font-size: 1rem;
+                font-weight: 600;
+            }
+        }
+
+        .progress-text {
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+    }
+
+    .quiz-body {
+        font-size: 2rem;
+        text-align: center;
+
+        .question {
+            padding: 0 3rem;
+        }
+    }
+}
