@@ -49,11 +49,7 @@ body::before {
 
   &-control {
     display: flex;
-
-    .btn {
-      margin-right: 1em;
-    }
-
+    gap: 2em;
   }
 
   &-control.justify-center {
