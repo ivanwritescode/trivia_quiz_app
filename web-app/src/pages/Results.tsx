@@ -16,6 +16,15 @@ interface IFinalResultsPageProps {
     onClick: () => void;
 }
 
+const getAnswerText = (answer: string) => {
+    if(answer === "True")
+        return <span className="highlight-correct">{answer}</span>
+    else if (answer === "False")
+        return <span className="highlight-wrong">{answer}</span>
+    else
+        return answer;
+};
+
 const FinalResultsPage = ({ questions, answers, score, onClick }: IFinalResultsPageProps) => {
     const getIsCorrect = (index: number) =>
         questions[index].correct_answer === answers[index].value;
@@ -38,7 +47,7 @@ const FinalResultsPage = ({ questions, answers, score, onClick }: IFinalResultsP
                                 <div className="list-item-wrapper">
                                     <div className="list-group-text">
                                         <p className="question">{he.decode(item.question)}</p>
-                                        <p className="annotation">The correct answer is <em className="highlight-correct">{item.correct_answer}</em>. You answered <em className="highlight-wrong">{item.incorrect_answers}</em></p>
+                                        <p className="annotation">The correct answer is <b>{getAnswerText(item.correct_answer)}</b>. You answered {getAnswerText(answers[i].value)}</p>
                                     </div>
                                     <div className="list-group-icon">
                                         {getIsCorrect(i) ? <SuccessIcon /> : <FailedIcon />} 
