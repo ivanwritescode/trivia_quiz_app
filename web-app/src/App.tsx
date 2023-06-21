@@ -6,7 +6,7 @@ import FinalResultsPage from './pages/Results'
 
 import { selectRandomQuestions } from './util/helpers'
 import { questions } from './util/questions'
-import { IQuestion } from './util/interfaces'
+import { IQuestion, IUserAnswer } from './util/interfaces'
 
 import './styles/reset.scss'
 import './styles/main.scss'
@@ -21,11 +21,6 @@ const initialQuestionsState = [{
   correct_answer: "",
   incorrect_answers: [""],
 }]
-
-interface IUserAnswer {
-  questionIndex: number;
-  value: string;
-}
 
 function App() {
   const [randomQuestions, setRandomQuestions] = useState<IQuestion[]>(initialQuestionsState);
@@ -72,7 +67,12 @@ function App() {
               question={randomQuestions[currentIndex]}
               handleClick={handleClick} />}
             path="/quiz" />
-          <Route element={<FinalResultsPage />} path="/finalresults" />
+          <Route element={
+            <FinalResultsPage
+              questions={randomQuestions}
+              answers={userAnswers}
+              score={score} />}
+            path="/finalresults" />
         </Routes>
       </div>
     </BrowserRouter>
