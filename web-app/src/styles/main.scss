@@ -1,5 +1,6 @@
 $button-success: #4fbd1b;
 $button-danger: #e04e10;
+$border-color: #e3e3e3;
 
 html {
   font-family: 'Poppins', sans-serif;
@@ -34,7 +35,7 @@ body::before {
   &-header {
     padding: 0;
     padding-bottom: 1em;
-    border-bottom: 1px solid #e3e3e3;
+    border-bottom: 1px solid $border-color;
   }
 
   &-body {
@@ -44,7 +45,7 @@ body::before {
   &-footer {
     padding: 0;
     padding-top: 1em;
-    border-top: 1px solid #e3e3e3;
+    border-top: 1px solid $border-color;
   }
 
   &-control {
