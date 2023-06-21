@@ -43,8 +43,17 @@ function App() {
     setCurrentIndex((prevState) => prevState + 1)
   };
 
+  const handleResultsClick = () => {
+    setCurrentIndex(0);
+    setRandomQuestions(() =>
+      selectRandomQuestions(questions.results, maxQuestions))
+    setUserAnswers([]);
+    setScore(0);
+  };
+
   useEffect(() => {
-    setRandomQuestions(() => selectRandomQuestions(questions.results, 10))
+    setRandomQuestions(() =>
+      selectRandomQuestions(questions.results, maxQuestions))
   }, []);
 
   useEffect(() => {
@@ -71,7 +80,8 @@ function App() {
             <FinalResultsPage
               questions={randomQuestions}
               answers={userAnswers}
-              score={score} />}
+              score={score}
+              onClick={handleResultsClick}/>}
             path="/finalresults" />
         </Routes>
       </div>

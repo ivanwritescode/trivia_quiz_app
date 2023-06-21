@@ -13,9 +13,10 @@ interface IFinalResultsPageProps {
     questions: IQuestion[];
     answers: IUserAnswer[];
     score: number;
+    onClick: () => void;
 }
 
-const FinalResultsPage = ({ questions, answers, score }: IFinalResultsPageProps) => {
+const FinalResultsPage = ({ questions, answers, score, onClick }: IFinalResultsPageProps) => {
     const getIsCorrect = (index: number) =>
         questions[index].correct_answer === answers[index].value;
     
@@ -48,7 +49,7 @@ const FinalResultsPage = ({ questions, answers, score }: IFinalResultsPageProps)
                     </ol>
                 </CardBody>
                 <CardFooter>
-                    <PageControl linkTo="../quiz" content="PLAY AGAIN" />
+                    <PageControl linkTo="../quiz" content="PLAY AGAIN" onClick={onClick} />
                 </CardFooter>
             </Card>
         </main>
