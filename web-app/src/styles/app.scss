@@ -1,7 +1,11 @@
 $blue-primary: #085696;
+$border-color: #e3e3e3;
+$clr-danger: #e04e10;
+$clr-success: #4fbd1b;
+$clr-neutral-grey: #a5a5a5;
 
 .page {
-    max-width: 50rem; 
+    max-width: 50rem;
 
     .logo {
         width: 2rem;
@@ -109,6 +113,104 @@ $blue-primary: #085696;
 
         .question {
             padding: 0 3rem;
+        }
+    }
+}
+
+.page-results {
+    .results-title {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        padding-bottom: 1.5em;
+
+        .logo {
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+
+    .user-score {
+        text-align: center;
+        line-height: 1;
+        padding-bottom: 2em;
+        margin-bottom: 1em;
+        border-bottom: 1px solid $border-color;
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 0.4em;
+        }
+
+        p {
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+    }
+
+    ol {
+        margin: 0;
+        font-size: 1rem;
+        padding: 0;
+        list-style: none;
+        counter-reset: custom-counter;
+
+
+        li {
+            position: relative;
+            padding: 1em 0;
+            border-bottom: 1px dashed $border-color;
+            padding-left: 2.5em;
+
+            &::before {
+                content: counter(custom-counter) ".";
+                counter-increment: custom-counter;
+                position: absolute;
+                left: 0;
+            }
+        }
+
+        .list-item-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .list-group-icon {
+                width: 10%;
+                text-align: right;
+
+                .icon {
+                    font-size: 1.5rem;
+                }
+            }
+
+            .list-group-text {
+                .question {
+                    font-weight: 500;
+                }
+
+                .annotation {
+                    font-size: 0.9rem;
+                    font-style: italic;
+                    color: $clr-neutral-grey;
+
+                    em {
+                        font-weight: 500;
+                    }
+
+                    .highlight-correct {
+                        color: $clr-success;
+                    }
+
+                    .highlight-wrong {
+                        color: $clr-danger;
+                    }
+                }
+            }
         }
     }
 }

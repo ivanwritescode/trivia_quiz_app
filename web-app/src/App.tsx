@@ -1,12 +1,12 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-
 import HomePage from './pages/Home'
+import QuizPage from './pages/Quiz'
+import FinalResultsPage from './pages/Results'
 
 import './styles/reset.scss'
 import './styles/main.scss'
 import './styles/app.scss'
-import QuizPage from './pages/Quiz'
 
 function App() {
   return (
@@ -15,6 +15,7 @@ function App() {
         <Routes>
           <Route element={<HomePage />} path="/" />
           <Route element={<QuizPage />} path="/quiz" />
+          <Route element={<FinalResultsPage />} path="/finalresults" />
         </Routes>
       </div>
     </BrowserRouter>
