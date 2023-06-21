@@ -6,7 +6,6 @@ interface ICardProps {
 }
 
 const Card = ({ children, className = "" }: ICardProps) => {
-
     return (
         <div className={`card ${className}`}>
             {children}
