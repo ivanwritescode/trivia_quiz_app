@@ -5,23 +5,30 @@ import CardHeader from '../UI/CardHeader';
 import CardBody from '../UI/CardBody';
 import CardFooter from '../UI/CardFooter';
 import CardControl from '../UI/CardControl';
+import { IQuestion } from '../util/interfaces';
+import he from 'he';
 
-const QuizPage = () => {
+interface IQuizPageProp {
+    question: IQuestion;
+    handleClick: () => void;
+}
+
+const QuizPage = ({ question, handleClick }: IQuizPageProp) => {
     return (
         <main>
             <Card className="page page-quiz">
                 <CardHeader className="quiz-title">
                     <div>
                         <img src={logo} className='logo' alt="zeniark logo" />
-                        <h1 className="title-text">Category: Geography</h1>
+                        <h1 className="title-text">Category: {question.category}</h1>
                     </div>
                     <p className="progress-text"><span>1 of 10</span></p>
                 </CardHeader>
                 <CardBody className="quiz-body">
-                    <p className='question'>The French Kingdom helped the United States gain their independence over Great Britain during the Revolutionary War.</p>
+                    <p className='question'>{he.decode(question.question)}</p>
                 </CardBody>
                 <CardFooter hasBorder>
-                    <CardControl isCentered />
+                    <CardControl isCentered handleClick={handleClick} />
                 </CardFooter>
             </Card>
         </main>
