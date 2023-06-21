@@ -12,6 +12,7 @@ import './styles/reset.scss'
 import './styles/main.scss'
 import './styles/app.scss'
 
+const maxQuestions = 10;
 const initialQuestionsState = [{
   category: "",
   type: "",
@@ -42,7 +43,13 @@ function App() {
       <div className="App">
         <Routes>
           <Route element={<HomePage />} path="/" />
-          <Route element={<QuizPage question={randomQuestions[currentIndex]} handleClick={handleClick} />} path="/quiz" />
+          <Route element={
+            <QuizPage
+              currentPosition={currentIndex + 1}
+              questionsCount={maxQuestions}
+              question={randomQuestions[currentIndex]}
+              handleClick={handleClick} />}
+            path="/quiz" />
           <Route element={<FinalResultsPage />} path="/finalresults" />
         </Routes>
       </div>

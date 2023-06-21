@@ -9,11 +9,18 @@ import { IQuestion } from '../util/interfaces';
 import he from 'he';
 
 interface IQuizPageProp {
+    currentPosition: number;
+    questionsCount: number;
     question: IQuestion;
     handleClick: () => void;
 }
 
-const QuizPage = ({ question, handleClick }: IQuizPageProp) => {
+const QuizPage = ({
+    currentPosition,
+    questionsCount,
+    question,
+    handleClick,
+}: IQuizPageProp) => {
     return (
         <main>
             <Card className="page page-quiz">
@@ -22,7 +29,7 @@ const QuizPage = ({ question, handleClick }: IQuizPageProp) => {
                         <img src={logo} className='logo' alt="zeniark logo" />
                         <h1 className="title-text">Category: {question.category}</h1>
                     </div>
-                    <p className="progress-text"><span>1 of 10</span></p>
+                    <p className="progress-text"><span>{currentPosition} of {questionsCount}</span></p>
                 </CardHeader>
                 <CardBody className="quiz-body">
                     <p className='question'>{he.decode(question.question)}</p>
