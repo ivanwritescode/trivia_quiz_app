@@ -3,6 +3,11 @@ $blue-primary: #085696;
 .page {
     width: 600px;
 
+    .logo {
+        width: 2rem;
+        margin-right: 1em;
+    }
+
     .title-text {
         font-size: 1rem;
         font-weight: 600;
@@ -90,12 +95,6 @@ $blue-primary: #085696;
         div {
             display: flex;
             align-items: center;
-
-            .logo {
-                width: 2rem;
-                margin-right: 1em;
-            }
-
         }
 
         .progress-text {
