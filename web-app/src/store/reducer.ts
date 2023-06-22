@@ -31,6 +31,12 @@ function reducer(state: IState, action: AppAction): IState {
                 score: action.score
             }
             break;
+        
+        case "RESET_USER_SCORE":
+            updatedState = {
+                ...state,
+                score: 0
+            }
 
         case "UPDATE_CURRENT_QUESTION_INDEX":
             updatedState = {
