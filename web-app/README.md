@@ -1,4 +1,4 @@
-# RethinkIT Skills Examination Solution
+# Zeniark Skills Examination Solution
 
 This repository contains my solution for the skills examination for Zeniark Philippines Consulting Corp.
 
