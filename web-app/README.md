@@ -15,6 +15,8 @@ This repository contains my solution for the skills examination for Zeniark Phil
     │   ├── Home.tsx
     │   ├── Quiz.tsx
     │   └── Results.tsx
+    ├── store/
+    │   └── reducer.ts
     ├── styles/
     │   ├── app.scss
     │   ├── main.scss
@@ -27,9 +29,11 @@ This repository contains my solution for the skills examination for Zeniark Phil
     │   ├── CardFooter.tsx
     │   └── CardHeader.tsx
     ├── util/
+    │   ├── constants.ts
     │   ├── helpers.ts
     │   ├── interfaces.ts
-    │   └── questions.ts
+    │   ├── questions.ts
+    │   └── types.ts
     ├── App.tsx
     └── index.tsx
 ```
@@ -41,6 +45,8 @@ This project is a Trivia Quiz App developed as a solution for the Zeniark ReactJ
 The `components` directory contains components that serve specific purposes within the application, providing a clear separation of concerns and encapsulating their functionality.
 
 The `pages` directory houses the primary components responsible for rendering the three main screens of the application: the Home page, Quiz page, and Results page. Each page component represents a distinct section of the application's user interface.
+
+The `store` directory holds state implementations such as reducers and actions
 
 The `styles` directory contains the SASS/SCSS preprocessor files, leveraging the SASS dependency. The use of SASS eliminates the need for manual compilation, allowing for more efficient and maintainable styling.
 
