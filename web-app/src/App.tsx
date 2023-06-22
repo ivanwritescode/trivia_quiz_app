@@ -7,7 +7,16 @@ import FinalResultsPage from './pages/Results'
 import { selectRandomQuestions } from './util/helpers'
 import { questions } from './util/questions'
 import { initialState, maxQuestions } from './util/constants'
-import reducer from './store/reducer'
+import reducer from './store/reducers/reducer'
+import {
+  resetCurrentQuestionIndex,
+  resetUserAnswers,
+  resetUserScore,
+  updateCurrentQuestionIndex,
+  updateQuestions,
+  updateUserAnswers,
+  updateUserScore
+} from './store/actions/actions'
 
 import './styles/reset.scss'
 import './styles/main.scss'
@@ -17,27 +26,24 @@ function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const handleClick = (value: string) => {
-    dispatch({
-      type: "UPDATE_USER_ANSWERS",
-      answer: { questionIndex: state.currentIndex, value: value }
-    })
+    dispatch(updateUserAnswers({ questionIndex: state.currentIndex, value: value }));
 
     let currentCorrectAnswer = state.questions[state.currentIndex].correct_answer;
     if (value === currentCorrectAnswer)
-      dispatch({ type: "UPDATE_USER_SCORE", score: state.score + 1 })
+      dispatch(updateUserScore(state.score + 1));
 
-    dispatch({ type: "UPDATE_CURRENT_QUESTION_INDEX" })
+    dispatch(updateCurrentQuestionIndex())
   };
 
   const handleResultsClick = () => {
-    dispatch({ type: "RESET_CURRENT_QUESTION_INDEX" });
-    dispatch({ type: "RESET_USER_ANSWERS" });
-    dispatch({ type: "RESET_USER_SCORE" })
-    dispatch({ type: "UPDATE_QUESTIONS", questions: selectRandomQuestions(questions.results, maxQuestions) });
+    dispatch(resetCurrentQuestionIndex());
+    dispatch(resetUserAnswers())
+    dispatch(resetUserScore())
+    dispatch(updateQuestions(selectRandomQuestions(questions.results, maxQuestions)))
   };
 
   useEffect(() => {
-    dispatch({ type: "UPDATE_QUESTIONS", questions: selectRandomQuestions(questions.results, maxQuestions) });
+    dispatch(updateQuestions(selectRandomQuestions(questions.results, maxQuestions)))
   }, []);
 
   useEffect(() => {
