@@ -16,7 +16,11 @@ This repository contains my solution for the skills examination for Zeniark Phil
     │   ├── Quiz.tsx
     │   └── Results.tsx
     ├── store/
-    │   └── reducer.ts
+    │   ├── actions/
+    │   │   ├── actions.ts
+    │   │   └── actionTypes.ts
+    │   └── reducers/
+    │       └── reducer.ts
     ├── styles/
     │   ├── app.scss
     │   ├── main.scss
@@ -32,8 +36,7 @@ This repository contains my solution for the skills examination for Zeniark Phil
     │   ├── constants.ts
     │   ├── helpers.ts
     │   ├── interfaces.ts
-    │   ├── questions.ts
-    │   └── types.ts
+    │   └── questions.ts
     ├── App.tsx
     └── index.tsx
 ```
