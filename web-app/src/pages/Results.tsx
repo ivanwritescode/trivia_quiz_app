@@ -41,9 +41,9 @@ const FinalResultsPage = ({ questions, answers, score, onClick }: IFinalResultsP
                         <h2>{score}/{questions.length}</h2>
                         <p>your score</p>
                     </div>
-                    <ol role="list">
+                    <ol>
                         {questions.map((item, i) =>
-                            <li role="listitem" key={i}>
+                            <li key={i}>
                                 <div className="list-item-wrapper">
                                     <div className="list-group-text">
                                         <p className="question">{he.decode(item.question)}</p>
