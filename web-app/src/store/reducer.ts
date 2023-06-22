@@ -53,7 +53,7 @@ function reducer(state: IState, action: AppAction): IState {
             break;
 
         default:
-            throw new Error("Unknown action type");
+            throw new Error("Unknown action type. Please check if dispatched actions are registered to reducer.");
     }
 
     return updatedState;
