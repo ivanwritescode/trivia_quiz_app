@@ -6,6 +6,8 @@ $clr-neutral-grey: #a5a5a5;
 
 .page {
     max-width: 50rem;
+    margin-left: 1em;
+    margin-right: 1em;
 
     .logo {
         width: 2rem;
@@ -215,6 +217,10 @@ $clr-neutral-grey: #a5a5a5;
     body {
         margin: 0;
         padding: 0;
+    }
+
+    .page {
+        margin: 0;
     }
 
     .page-home {
