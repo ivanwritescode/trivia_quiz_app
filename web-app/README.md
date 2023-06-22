@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# RethinkIT Skills Examination Solution
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains my solution for the skills examination for Zeniark Philippines Consulting Corp.
 
-## Available Scripts
+## Project Directory Structure
 
-In the project directory, you can run:
+```
+.
+├── public
+└── src/
+    ├── components/
+    │   ├── Icons.tsx
+    │   └── PageControl.tsx
+    ├── pages/
+    │   ├── Home.tsx
+    │   ├── Quiz.tsx
+    │   └── Results.tsx
+    ├── styles/
+    │   ├── app.scss
+    │   ├── main.scss
+    │   └── reset.scss
+    ├── UI/
+    │   ├── Button.tsx
+    │   ├── Card.tsx
+    │   ├── CardBody.tsx
+    │   ├── CardControl.tsx
+    │   ├── CardFooter.tsx
+    │   └── CardHeader.tsx
+    ├── util/
+    │   ├── helpers.ts
+    │   ├── interfaces.ts
+    │   └── questions.ts
+    ├── App.tsx
+    └── index.tsx
+```
 
-### `npm start`
+## Description
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This project is a Trivia Quiz App developed as a solution for the Zeniark ReactJS Coding Challenge. It encompasses multiple directories and files, each responsible for distinct aspects of the application's functionality and structure.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The `components` directory contains components that serve specific purposes within the application, providing a clear separation of concerns and encapsulating their functionality.
 
-### `npm test`
+The `pages` directory houses the primary components responsible for rendering the three main screens of the application: the Home page, Quiz page, and Results page. Each page component represents a distinct section of the application's user interface.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The `styles` directory contains the SASS/SCSS preprocessor files, leveraging the SASS dependency. The use of SASS eliminates the need for manual compilation, allowing for more efficient and maintainable styling.
 
-### `npm run build`
+The `UI` directory consists of reusable UI components that can be utilized throughout the application. These components have a generic nature, making them suitable for various contexts within the app. By centralizing the UI components in this directory, code reusability and consistency are promoted.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The `util` directory serves as a repository for helper functions, constants, and interfaces that can be reused throughout the application. These utilities provide common functionalities, facilitate code organization, and promote maintainability by encapsulating commonly used logic and data structures.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+By structuring the codebase in this manner, the application benefits from improved modularity, code reusability, and organization. This organization scheme enhances the maintainability and scalability of the project by promoting clear separation of concerns and facilitating efficient collaboration among developers.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Getting Started
+```bash
+# Clone the repository
+git clone https://github.com/ivanwritescode/zeniark-reactjs-coding-challenge.git
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Navigate to the project directory
+cd zeniark-reactjs-coding-challenge/web-app 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Install the dependencies
+npm install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Start the development server
+npm start 
+```
