@@ -1,63 +1,76 @@
-# Zeniark ReactJS Coding Challenge
+# Zeniark Skills Examination Solution
 
-## Overview
+This repository contains my solution for the skills examination for Zeniark Philippines Consulting Corp.
 
-Your challenge is to create a simple, 10 question, true or false, trivia app in the technology you are familiar with. While the problem you are working on is simple, you should treat this like a real world application. This is a chance to show off your abilities and impress.
+## Project Directory Structure
 
-**What we are looking for through this challenge:**
+```
+.
+├── public
+└── src/
+    ├── components/
+    │   ├── Icons.tsx
+    │   └── PageControl.tsx
+    ├── pages/
+    │   ├── Home.tsx
+    │   ├── Quiz.tsx
+    │   └── Results.tsx
+    ├── store/
+    │   ├── actions/
+    │   │   ├── actions.ts
+    │   │   └── actionTypes.ts
+    │   └── reducers/
+    │       └── reducer.ts
+    ├── styles/
+    │   ├── app.scss
+    │   ├── main.scss
+    │   └── reset.scss
+    ├── UI/
+    │   ├── Button.tsx
+    │   ├── Card.tsx
+    │   ├── CardBody.tsx
+    │   ├── CardControl.tsx
+    │   ├── CardFooter.tsx
+    │   └── CardHeader.tsx
+    ├── util/
+    │   ├── constants.ts
+    │   ├── helpers.ts
+    │   ├── interfaces.ts
+    │   └── questions.ts
+    ├── App.tsx
+    └── index.tsx
+```
 
-- Functionality
-- Code Format
-- Project Structure
-- Scalability
-- Maintainability
-- Use of industry best practices
+## Description
 
-## Goals
+This project is a Trivia Quiz App developed as a solution for the Zeniark ReactJS Coding Challenge. It encompasses multiple directories and files, each responsible for distinct aspects of the application's functionality and structure.
 
-Implement the screens based on the wireframes below using advanced techniques and industry best practices for your platform. Note that the wireframes may not be complete, so use your best judgment for UI/UX implementation. **Do not use a boilerplate like React Boilerplate for this challenge.** We want to see how you structure your project and what tooling you use from scratch. Create react app is fine to use. Using NextJS is a PLUS! 
+The `components` directory contains components that serve specific purposes within the application, providing a clear separation of concerns and encapsulating their functionality.
 
-## Steps
+The `pages` directory houses the primary components responsible for rendering the three main screens of the application: the Home page, Quiz page, and Results page. Each page component represents a distinct section of the application's user interface.
 
-#### 1. Fork this repo and use web-app folder as code boilerplate to start or you can create a fresh react-app.
-#### 2. Data: Feel free to do whatever you prefer in pulling data.
-Do either of the ff:
-- You can check file under `mock-data/questions.json` and do API data mocking. 
-- Or you can have the data under `mock-data/questions.json` and directly code/put it to state/local state.
-- Or you can setup nodejs server and do API request (PLUS Points!)
+The `store` directory holds state implementations such as reducers and actions
 
-#### 3. UI requirement:
-We provide the design for the trivia app. You can check the figma file [here](https://www.figma.com/file/6r4GIfxp3s9VXPq95KK9Gf/Zeniark-Coding-Test?node-id=0%3A1). You don't need to follow exactly the same if you do not have enough time. We want to see your general HTML/CSS skills and how you behavior when converting a design into a real product. `(Logo and background image are located in web-app/src/images)`
+The `styles` directory contains the SASS/SCSS preprocessor files, leveraging the SASS dependency. The use of SASS eliminates the need for manual compilation, allowing for more efficient and maintainable styling.
 
-### Intro / Home Screen:
+The `UI` directory consists of reusable UI components that can be utilized throughout the application. These components have a generic nature, making them suitable for various contexts within the app. By centralizing the UI components in this directory, code reusability and consistency are promoted.
 
-![The Intro screen for the app](screenshots/intro-screen.png "The Intro screen for the app")
+The `util` directory serves as a repository for helper functions, constants, and interfaces that can be reused throughout the application. These utilities provide common functionalities, facilitate code organization, and promote maintainability by encapsulating commonly used logic and data structures.
 
-- Static Text
-- LET'S START button navigates to the Quiz screen and starts the Quiz
-
-### Quiz Screen:
-
-![The Quiz screen for the app](screenshots/question-screen.png "The Quiz screen for the app")
-
-- The headline is from question category
-- The card element contains the current question
-- The next question should appear after the current question is answered True or False
-- After all questions have been answered, navigate to the Results Screen
-
-### Results screen:
-
-![The Results screen for the app](screenshots/results-screen.png "The Results screen for the app")
-
-- The Score shows correct and total
-- Displays a list of the questions and whether the answer was correct or not
-- PLAY AGAIN starts over with new set of random questions and navigates to the Home Screen
-
-## Submission
-
-Please use git for version control and platforms like Github to host the repository. Once you have finished your challenge, send us the repository url. It would be even better if you can have a documentation for how to run your code in our environment.
-
-HAPPY CODING!
+By structuring the codebase in this manner, the application benefits from improved modularity, code reusability, and organization. This organization scheme enhances the maintainability and scalability of the project by promoting clear separation of concerns and facilitating efficient collaboration among developers.
 
 
-~ Chrisl.Zeniark
+## Getting Started
+```bash
+# Clone the repository
+git clone https://github.com/ivanwritescode/zeniark-reactjs-coding-challenge.git
+
+# Navigate to the project directory
+cd zeniark-reactjs-coding-challenge/web-app 
+
+# Install the dependencies
+npm install
+
+# Start the development server
+npm start 
+```
